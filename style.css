@@ -1,0 +1,242 @@
+body{
+    margin:0;
+    background: #2c3036;
+    color:white;
+    
+}
+nav{
+    display: flex;
+    justify-content: center;
+}
+nav ul{
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    background-color: #2c3036;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+    height: 60px;
+    border-radius: 10px;
+    border: solid #067bbf;
+}
+li{
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 13px;
+}
+a li{
+    text-decoration: none;
+    color: white;
+    transition: .5s;
+}
+a li:hover{
+    transition: .5s;
+    font-size: 13px;
+}
+nav #herb {
+    display: flex;
+    justify-content: left;
+    width: 60px;
+    height:60px;
+    margin: 5px;
+}
+main{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+main .box{
+    margin: 10px;
+    border: solid #067bbf;
+    width: 30%;
+    border-radius: 16px;
+}
+main .box2{
+    margin: 10px;
+    border: solid #067bbf;
+    width: 30%;
+    
+    border-radius: 16px;
+}
+.box{
+    text-align: center;
+}
+.box p {
+    font-size: 20px;
+    text-wrap: wrap;
+}
+.box2{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+   float: left;
+}
+ .box2 .b{
+    width: 210px;
+    height: 200px;
+    border: solid #067bbf;
+    border-radius: 30px;
+    margin:10px;
+    transition: .5s;
+    float: left;
+}
+ .box2 .b:hover{
+    width: 220px;
+    height: 210px;
+    border: solid #067bbf;
+    border-radius: 30px;
+    margin:10px;
+    transition: .5s;
+}
+.b img{
+    width: 210px;
+    height: 200px;
+    border-radius: 30px;
+    transition: .5s;
+}
+.b img:hover{
+    width: 220px;
+    height: 210px;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+#slider{
+    width: 540px;
+    height: 312px;
+    border: solid #067bbf;
+    border-radius: 20px;
+}
+#slider img{
+    border-radius: 20px;
+}
+#sliderH{
+    width: 540px;
+    height: 312px;
+    border: solid #067bbf;
+    border-radius: 20px;
+    float: left;
+    
+}
+#sliderH img{
+    border-radius: 20px;
+}
+.number {
+    color: #f2f2f2;
+    font-size: 16px;
+    padding: 8px 12px;
+    position: absolute;
+    color: black;
+  }
+#container{
+    margin-top: 50px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+}
+#container .box{
+    margin: 14px;
+    border: solid #067bbf;
+    width: 350px;
+    height: 600px;
+    border-radius: 16px;
+    float: left;
+}
+#container .box p {
+    font-size: 16px;
+}
+#container .box ul {
+    font-size: 16px;
+}
+#container img{
+    width: 540px;
+    height: 312px;
+}
+#containerG{
+    margin-top: 50px;
+    display: block;
+    justify-content: flex-start;
+    align-items: center;
+    
+    margin: 0 auto;
+    
+}
+#containerG .box{
+    margin: 30px;
+    border: solid #067bbf;
+    width: 550px;
+    height: 600px;
+    border-radius: 16px;
+    float: left;
+}
+#containerG .box p {
+    font-size: 16px;
+}
+#containerG .box ul {
+    font-size: 16px;
+}
+#containerG img{
+    width: 540px;
+    height: 312px;
+}
+#quiz{
+    width: 600px;
+    height: 600px;
+    border: #067bbf solid;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.Pytanie{
+    margin: 10px;
+    width: 400px;
+    height: 200px;
+    border: #067bbf solid;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Pytanie p{
+    text-align: center;
+}
+.Odpowiedz{
+    width: 400px;
+    height: 250px;
+    border: #067bbf solid;
+    border-radius: 30px;
+    display: flex;
+    text-align: center;
+}
+.Odpowiedz label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    background: none;
+    border: #067bbf solid;
+    border-radius: 30px;
+    color: white;
+}
+.button:active{
+    border: green solid;
+}
+
