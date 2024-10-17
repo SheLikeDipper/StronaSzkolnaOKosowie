@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kosowo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Assets/Herb.png">
+</head>
+<body>
+    <nav>
+        
+        <ul>
+            <a href="index.html"id="herb" ><img src="Assets/Herb.png" alt="" ></a>
+            <a href="Geografia.html"><li>Geografia</li></a>
+            <a href="Demografia.html"><li>Demografia</li></a>
+            <a href="historia.html"><li>Historia</li></a>
+            <a href="RiK.html"><li>Religia I Kultura</li></a>
+            <a href="UP.html"><li>Ustrój polityczny</li></a>
+        </ul>
+    </nav>
+    <main>
+        <div class="box">
+            <h3 style="text-align: center;">Ogólne informacje</h3><br>
+            <p style="margin: 30px;">Kosowo to niewielkie państwo w południowo-wschodniej Europie, na Bałkanach. Położone jest między Serbią na północy i wschodzie, Czarnogórą na zachodzie, Albanią na południu oraz Macedonią Północną na południowym wschodzie. Kosowo ogłosiło niepodległość od Serbii 17 lutego 2008 roku, ale jego status międzynarodowy pozostaje kwestią sporną. Niektóre kraje, w tym Serbia i kilka innych, nie uznają jego suwerenności, podczas gdy większość państw świata, w tym USA i większość państw Unii Europejskiej, uznaje Kosowo za niezależne państwo.</p>
+        </div>
+        <div class="box2">
+            <div class="b"><img src="Assets/flaga.png" alt="" title="Flaga"></div>
+            <div class="b"><img src="Assets/sasiedzi.jpg" alt="" title="Sąsiedzi"></div>
+            <div class="b"><img src="Assets/Herb.png" alt="" title="Herb"></div>
+            <div class="b"><img src="Assets/położenie.png" alt="" title="Położenie"></div>
+        </div>
+
+       
+        <div id="quiz">
+            <center><h2>QUIZ O KOSOWIE</h2></center><br><br>
+            <div class="Pytanie">
+                <center><h3>Pytanie1:</h3></center><br>
+                <p>Jakie są trzy główne filary władzy politycznej w Kosowie?</p>
+            </div>
+            <div class="Odpowiedz">
+                <label><input type="radio" name="q1" value="a"> Władza ustawodawcza, wykonawcza, sądownicza</label><br>
+        <label><input type="radio" name="q1" value="b"> Władza prezydencka, wojskowa, religijna</label><br>
+        <label><input type="radio" name="q1" value="c"> Władza federalna, lokalna, społeczna</label><br>
+        <input class="button" type="button" value="Odpowiedz" onclick="quiz()">
+            </div>
+            <div class="Pytanie">
+                <center><h3>Pytanie2:</h3></center><br>
+                <p>Pytanie 2: Ile miejsc w parlamencie Kosowa jest zarezerwowanych dla przedstawicieli mniejszości etnicznych?</p>
+            </div>
+            <div class="Odpowiedz">
+                <label><input type="radio" name="q2" value="a"> 10 miejsc</label><br>
+                <label><input type="radio" name="q2" value="b"> 15 miejsc</label><br>
+                <label><input type="radio" name="q2" value="c"> 20 miejsc</label><br>
+                <input class="button" type="button" value="Odpowiedz" onclick="quiz()">
+            </div>
+            <div class="Pytanie">
+                <center><h3>Pytanie3:</h3></center><br>
+                <p>Pytanie 3: Jaką rolę pełni Trybunał Konstytucyjny Kosowa w systemie prawnym?</p>
+            </div>
+            <div class="Odpowiedz">
+                <label><input type="radio" name="q3" value="a"> Zajmuje się sprawami międzynarodowymi</label><br>
+                <label><input type="radio" name="q3" value="b"> Orzeka o zgodności ustaw z konstytucją</label><br>
+                <label><input type="radio" name="q3" value="c"> Nadzoruje pracę rządu</label><br>
+                <input class="button" type="Button" value="sprawdz" onclick="sprawdz()">
+            </div>
+            
+            <p id="result"></p>
+        </div>
+    </main>
+    
+        <script>
+            let quizIndex = 0;
+            quiz();
+
+            function quiz(){
+                let i;
+                let pytanie = document.getElementsByClassName("Pytanie");
+                let odp= document.getElementsByClassName("Odpowiedz");
+
+                for (i = 0;i< pytanie.length; i++){
+                    pytanie[i].style.display = "none";
+                    
+                }
+                for (i = 0;i< odp.length; i++){
+                    odp[i].style.display = "none";
+                    
+                }
+                quizIndex++;
+                pytanie[quizIndex-1].style.display = "block";
+                odp[quizIndex-1].style.display = "block";
+                if (quizIndex >= pytanie.length && odp.length){
+                    odp[i].style.display = "none";
+                    
+                     
+                }
+
+                
+                
+            }
+            function sprawdz(){
+                 // Odpowiedzi poprawne
+            const correctAnswers = {
+                q1: "a",
+                q2: "c",
+                q3: "b",
+            };
+
+            // Pobierz odpowiedzi użytkownika
+            const userAnswers = {
+                q1: document.querySelector('input[name="q1"]:checked')?.value,
+                q2: document.querySelector('input[name="q2"]:checked')?.value,
+                q3: document.querySelector('input[name="q3"]:checked')?.value,
+                q4: document.querySelector('input[name="q4"]:checked')?.value
+            };
+
+            // Sprawdź, ile odpowiedzi jest poprawnych
+            let score = 0;
+            let totalQuestions = 3;
+            
+            for (let question in correctAnswers) {
+                if (userAnswers[question] === correctAnswers[question]) {
+                    score++;
+                }
+            }
+
+            // Wyświetl wynik
+            const resultText = `Twój wynik: ${score} z ${totalQuestions}`;
+            document.getElementById("result").innerHTML = resultText;
+
+            // Pokoloruj odpowiedzi (poprawne na zielono, niepoprawne na czerwono)
+            for (let question in correctAnswers) {
+                let selectedAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                if (selectedAnswer) {
+                    if (userAnswers[question] === correctAnswers[question]) {
+                        selectedAnswer.parentElement.classList.add("correct");
+                    } else {
+                        selectedAnswer.parentElement.classList.add("incorrect");
+                    }
+                }
+            }
+            }
+        </script>
+    
+</body>
+</html>
